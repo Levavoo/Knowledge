@@ -2,7 +2,7 @@
 
 Personal knowledge database for data analytics, machine learning, statistics, programming, and exam preparation.
 
-This repository is organized around small atomic entries. Each entry should explain one term, concept, formula, code example, or source.
+This repository is organized around small atomic entries. Each entry should explain one term, concept, formula, code example, question, or source.
 
 ## Core workflow
 
@@ -13,6 +13,7 @@ Use this chat with commands like:
 /new variance --formula
 /new linear regression --code --example
 /new API --rus
+/new question Why does gradient descent need a learning rate?
 ```
 
 The output should be saved into the matching folder.
@@ -25,6 +26,7 @@ concepts/    Larger conceptual explanations
 formulas/    Mathematical formulas and notation
 code/        Code examples plus matching documentation files
 examples/    Practical worked examples and use cases
+questions/   Questions encountered while learning or reading
 books/       Uploaded books, book notes, and reading context
 sources/     Source notes and approved reference sources
 tags/        Tag index pages
@@ -43,3 +45,13 @@ Every knowledge entry should normally contain:
 - source notes, if relevant
 
 For code files, create a matching `.md` documentation file with the same base name.
+
+## Question workflow
+
+Use:
+
+```text
+/new question [question text]
+```
+
+Question entries are saved in `questions/` and should keep the original question visible, then add a short answer, detailed answer, related concepts, and follow-up questions.
