@@ -18,6 +18,30 @@ Use this chat with commands like:
 
 The output should be saved into the matching folder.
 
+## Active book workflow
+
+Current active reading source:
+
+```text
+books/oreilly_math_basics_for_data_science.md
+sources/oreilly_math_basics_for_data_science.md
+```
+
+When an entry comes from the active book, use:
+
+```text
+/new [term or concept] --book
+/new [term or concept] --book --formula
+/new [term or concept] --book --code --example
+/new question [question text]
+```
+
+Book-related entries should include the tag:
+
+```md
+#oreilly-math-data-science
+```
+
 ## Folder structure
 
 ```text
