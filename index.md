@@ -9,6 +9,7 @@ This is the main navigation page for the Knowledge DB.
 - [Formulas](formulas/)
 - [Code](code/)
 - [Examples](examples/)
+- [Questions](questions/)
 - [Books](books/)
 - [Sources](sources/)
 - [Tags](tags/)
@@ -26,6 +27,12 @@ Use:
 
 ```text
 /new [entry name] --options
+```
+
+For learning questions, use:
+
+```text
+/new question [question text]
 ```
 
 Common options:
