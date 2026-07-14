@@ -1,0 +1,16 @@
+# Local book files
+Books/*.pdf
+Books/*.epub
+Books/*.mobi
+Books/*.azw3
+
+# Local notes/cache
+.DS_Store
+Thumbs.db
+.obsidian/workspace*.json
+
+# Python cache for optional experiments
+__pycache__/
+*.pyc
+.venv/
+venv/
