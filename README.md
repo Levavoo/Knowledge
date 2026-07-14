@@ -16,11 +16,17 @@ Knowledge/
 ├── Books/
 │   └── README.md
 ├── Concepts/
+│   └── .gitkeep
 ├── Formulas/
+│   └── .gitkeep
 ├── Code/
+│   └── .gitkeep
 ├── Examples/
+│   └── .gitkeep
 ├── Flashcards/
+│   └── .gitkeep
 ├── Vocabulary/
+│   └── .gitkeep
 ├── Commands/
 │   ├── README.md
 │   └── modifiers.md
@@ -31,6 +37,8 @@ Knowledge/
     ├── example_entry.md
     └── vocabulary_entry.md
 ```
+
+Note: `.gitkeep` files only make empty folders visible in Git. They can be removed once real entries exist in those folders.
 
 ## Folder purpose
 
