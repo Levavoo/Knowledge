@@ -1,81 +1,86 @@
 # Knowledge
 
-Personal knowledge database for data analytics, machine learning, statistics, programming, and exam preparation.
+Personal atomic knowledge base for data analytics, machine learning, statistics, programming, mathematics, exam preparation, and multilingual technical vocabulary.
 
-This repository is organized around small atomic entries. Each entry should explain one term, concept, formula, code example, question, or source.
+The repository is organized around small reusable entries. Each entry should explain one term, concept, formula, code implementation, worked example, flashcard set, or vocabulary item.
+
+## Repository structure
+
+```text
+Knowledge/
+├── README.md
+├── COMMANDS.md
+├── TAG_INDEX.md
+├── .gitignore
+│
+├── Books/
+│   └── README.md
+├── Concepts/
+├── Formulas/
+├── Code/
+├── Examples/
+├── Flashcards/
+├── Vocabulary/
+├── Commands/
+│   ├── README.md
+│   └── modifiers.md
+└── Templates/
+    ├── concept_entry.md
+    ├── formula_entry.md
+    ├── code_entry.md
+    ├── example_entry.md
+    └── vocabulary_entry.md
+```
+
+## Folder purpose
+
+| Folder | Purpose |
+|---|---|
+| `Books/` | Local book storage and reading context. Do not commit copyrighted PDFs. |
+| `Concepts/` | Main explanations for terms, concepts, and theories. |
+| `Formulas/` | Mathematical formulas, symbols, derivations, and calculation logic. |
+| `Code/` | Code-focused learning entries and from-scratch implementations. |
+| `Examples/` | Worked examples, practical situations, and use cases. |
+| `Flashcards/` | Review questions and Anki-style learning cards. |
+| `Vocabulary/` | English/German/Russian vocabulary entries and terminology tables. |
+| `Commands/` | Defined assistant commands and allowed modifiers. |
+| `Templates/` | Reusable Markdown templates for new entries. |
 
 ## Core workflow
 
 Use this chat with commands like:
 
 ```text
-/new decision tree --example --source
-/new variance --formula
-/new linear regression --code --example
-/new API --rus
+/new variance
+/new variance --formula --example
+/new cosine similarity --formula --code --example
+/new likelihood --rus
+/new gradient descent --code --formula
 /new question Why does gradient descent need a learning rate?
 ```
 
-The output should be saved into the matching folder.
-
-## Active book workflow
-
-Current active reading source:
-
-```text
-books/oreilly_math_basics_for_data_science.md
-sources/oreilly_math_basics_for_data_science.md
-```
-
-When an entry comes from the active book, use:
-
-```text
-/new [term or concept] --book
-/new [term or concept] --book --formula
-/new [term or concept] --book --code --example
-/new question [question text]
-```
-
-Book-related entries should include the tag:
-
-```md
-#oreilly-math-data-science
-```
-
-## Folder structure
-
-```text
-terms/       Short definitions and vocabulary entries
-concepts/    Larger conceptual explanations
-formulas/    Mathematical formulas and notation
-code/        Code examples plus matching documentation files
-examples/    Practical worked examples and use cases
-questions/   Questions encountered while learning or reading
-books/       Uploaded books, book notes, and reading context
-sources/     Source notes and approved reference sources
-tags/        Tag index pages
-templates/   Reusable entry templates
-```
+If no modifier is provided, the assistant decides which supporting files are useful.
 
 ## Entry standard
 
-Every knowledge entry should normally contain:
+Every normal concept entry should include:
 
-- technical explanation
-- simple explanation
+- short definition
+- simple explanation in English
+- technical explanation in English
 - example
 - use case
-- related concepts
-- source notes, if relevant
+- common mistakes, if useful
+- related entries
+- tags
+- source reference, if relevant
 
-For code files, create a matching `.md` documentation file with the same base name.
+Formula-heavy concepts may also receive `Formulas/` entries. Code-heavy concepts may also receive `Code/` entries. Practical concepts may also receive `Examples/` entries.
 
-## Question workflow
+## Source rule
 
-Use:
+When a note comes from a book, course, video, school task, or documentation page, add a source reference in the front matter. For copyrighted books, write your own explanation and page/chapter reference instead of copying long passages.
 
-```text
-/new question [question text]
-```
+## Book storage rule
 
-Question entries are saved in `questions/` and should keep the original question visible, then add a short answer, detailed answer, related concepts, and follow-up questions.
+`Books/` may be used locally for PDFs and other book files, but the repository should not commit copyrighted PDFs. The `.gitignore` blocks common book formats by default.
