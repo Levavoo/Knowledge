@@ -64,7 +64,7 @@ Use this chat with commands like:
 /new cosine similarity --formula --code --example
 /new likelihood --rus
 /new gradient descent --code --formula
-/new question Why does gradient descent need a learning rate?
+/new question "Why does gradient descent need a learning rate?"
 ```
 
 If no modifier is provided, the assistant decides which supporting files are useful.
